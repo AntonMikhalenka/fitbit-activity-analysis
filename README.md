@@ -82,7 +82,7 @@ FROM dailyActivity_merged
 WHERE TotalSteps=0
 ```
 
-### Deleting time from date columns
+### Removing time from date columns
 Since data was gathered on a daily basis, there is no need for time portion of date columns.
 
 ```sql
