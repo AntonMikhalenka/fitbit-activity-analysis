@@ -254,7 +254,7 @@ CROSS JOIN medians
 <img width="940" height="577" alt="image" src="https://github.com/user-attachments/assets/76107cb6-aae3-47bb-8d67-b4c190ccb62f" />
 
 #### 4.2 Activity and steps recommendations
-According to the World Health Organization, adults aged 18–64 should do at least 150 minutes of moderate-intensity physical activity throughout the week — equivalent to 21.4 minutes per day:
+According to the World Health Organization, adults aged 18–64 should do at least 150 minutes of moderate-intensity physical activity throughout the week - equivalent to 21.4 minutes per day:
 
 ```sql
 SELECT 1.0 * SUM(CASE WHEN criteria = "Fits WHO criteria" THEN 1 ELSE 0 END) / COUNT(*) AS People_who_fit_criteria
@@ -284,7 +284,7 @@ GROUP BY ID
 HAVING COUNT(ID)>3
 )
 ```
-Only **45.46%** of users take enough daily steps — fewer than half.
+Only **45.46%** of users take enough daily steps - fewer than half.
 
 #### 4.3 Correlation between steps and sleep
 Average daily steps and average sleep duration were joined per user to test whether a correlation exists:
