@@ -49,9 +49,9 @@ Tables containing different time periods were merged into single tables using `U
 
 ```sql
 CREATE TABLE dailyActivity_merged AS
-SELECT * FROM dailyActivity _1
+SELECT * FROM dailyActivity_1
 UNION ALL
-SELECT * FROM dailyActivity _2
+SELECT * FROM dailyActivity_2
 ```
 
 After merging, the number of distinct IDs has been identified:
@@ -254,7 +254,7 @@ CROSS JOIN medians
 <img width="940" height="577" alt="image" src="https://github.com/user-attachments/assets/76107cb6-aae3-47bb-8d67-b4c190ccb62f" />
 
 #### 4.2 Activity and steps recommendations
-According to the World Health Organization, adults aged 18–64 should do at least 150 minutes of moderate-intensity physical activity throughout the week - equivalent to 21.4 minutes per day:
+According to the World Health Organization, adults aged 18-64 should do at least 150 minutes of moderate-intensity physical activity throughout the week - equivalent to 21.4 minutes per day:
 
 ```sql
 SELECT 1.0 * SUM(CASE WHEN criteria = "Fits WHO criteria" THEN 1 ELSE 0 END) / COUNT(*) AS People_who_fit_criteria
